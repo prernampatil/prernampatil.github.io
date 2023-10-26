@@ -4,13 +4,20 @@
 }
 
 a:hover {
-    font-weight: 400; 
+    /* font-weight: 400; */
     text-decoration: none;
     transition-duration: 0.3s;
     transition-timing-function: linear;
     /* color: #444; */
 }
-
+.title_text
+{
+    font-family: 'League Gothic', sans-serif;
+    font-weight: 700;
+    font-size: 62pt;
+    line-height: 54pt;
+    color: #000000;
+}
 
 .noter {
     font-size: 9pt;
