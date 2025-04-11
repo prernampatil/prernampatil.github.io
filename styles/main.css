@@ -77,19 +77,19 @@ li{
     width: 150px;
     height: 150px;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 20%;
 }
 
 #UPO-pic{
-    width: 600px;
-    height: 300px;
+    width: 300px;
+    height: 150px;
     object-fit: cover;
     border-width: 0.01em;
     border-style: dashed;
 }
 #UPO-pic:hover{
-    width: 600px;
-    height: 300px;
+    width: 300px;
+    height: 150px;
     object-fit: cover;
     border-width: 0.1em;
     border-style: solid;
@@ -119,6 +119,25 @@ li{
     font-size: 1.1em;
 }
 
+#projects--list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-gap: 1px;
+}
+
+#projects--list a{
+    font-weight: 300;
+    color: var(--secondaryTextColor);
+    font-size: 1em;
+    transition: 0.3s;
+}
+
+#projects--list a:hover{
+    font-weight: 100;
+    color: var(--mainLinkColor);
+    font-size: 1.1em;
+}
+
 #qualifications--list{
     list-style-type: square;
 }
@@ -136,6 +155,11 @@ li{
     padding: 0.5em 1em;
     align-items: center;
 }
+
+/* .tag {
+    color: rgb(10, 208, 218); /* Change to any color you want */
+    /*text-decoration: none; /* Optional: Removes the default underline */
+/*} */
 
 .card--project{
     padding-top: 1em;
@@ -204,3 +228,197 @@ li{
         padding-left: 0;
     }
 }
+
+ /* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+} 
+
+h2 {
+    text-align: center;
+    color: #141313;
+}
+
+#timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.timeline-date {
+    width: 20%;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 20px;
+    color: #ff6b6b;
+}
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+.timeline-content {
+    background: #c7ccd6;
+    padding: 15px;
+    border-radius: 8px;
+    width: 75%;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    background: #ff6b6b;
+    left: 10%;
+    top: 0;
+    bottom: 0;
+    margin-left: -4px;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    background: #415a77;
+}
+
+/* Styling for circle points on the timeline */
+.timeline-item::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: #ff6b6b;
+    border-radius: 50%;
+    position: absolute;
+    left: 10%;
+    transform: translateX(-50%);
+}
+
+.timeline-content h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #ff9f1c;
+}
+#skills {
+    text-align: left;
+    padding: 0px;
+    background-color: mainBgColor;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.skill-group h3 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.skill-group p {
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+}
+
+
+/* ---- Individual Publication Entry ---- */
+.pubs {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    
+    /*border-bottom: 1px solid #ddd; /* Adds a subtle separator */
+}
+
+/* ---- Paper Title Styling ---- */
+.papertitle {
+    /* font-weight: bold; */
+    /* font-size: 18px; */
+    /* color: #0056b3; */
+    list-style-type: square;
+}
+
+/* ---- Author Name Styling ---- */
+.thisauthor {
+    font-style: italic;
+    text-decoration: underline;
+    /* color: #666; */
+}
+
+/* ---- Links (PDF, Abstract) Styling ---- */
+.tag {
+    text-decoration: none;
+    /* color: #007bff; */
+    font-weight: bold;
+}
+
+.tag:hover {
+    text-decoration: underline;
+    /* color: #0056b3; */
+}
+
+/* ---- Separator ( | ) Styling ---- */
+.tagsep {
+    /* color: #aaa; */
+    margin: 0 5px;
+}
+
+/* ---- Responsive Styling ----
+@media (max-width: 600px) {
+    .section--page {
+        padding: 20px;
+    }
+
+    .papertitle {
+        font-size: 16px;
+    }
+
+    .thisauthor {
+        font-size: 14px;
+    }
+
+    .tag {
+        font-size: 14px;
+    } */
+/* } */
