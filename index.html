@@ -12,14 +12,15 @@
 <body>
 <div id="container--main">
     <section id="section--page">
-        <div id="socials--list">
-            <a href="index.html">About</a>
-            <a href="projects.html">Research Projects</a>
-            <a href="Publications.html">Publications/Conference Talks</a>
-        </div>
-        <div class="line-break"></div>
+        <div id="header"></div>
     </section>
-    
+    <script>
+        // Load the header dynamically
+        fetch('./header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data)
+            .catch(error => console.error('Error loading header:', error));
+    </script>
      
         <h1 id="user-name">Prerna M Patil</h1>
         <section id="wrapper--hero" class="section--page">
