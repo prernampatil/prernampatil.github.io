@@ -12,13 +12,9 @@
 <body>
     <div id="container--main">
         <section id="section--page">
-            <div id="socials--list">
-                <a href="index.html">About</a>
-                <a href="projects.html">Research Projects</a>
-                <a href="Publications.html">Publications/Conference Talks</a>
-            </div>
-            <div class="line-break"></div>
+            <div id="header"></div>
         </section>
+        <script src="loadHeader.js"></script>
         <h2>Identify duplicate questions on Quora using neural network models </h2>
         <h3>Abstract</h3>
         <p>The information available on online user forums is abundant however, very distributed. To increase the efficiency of such forums, it is essential to combine the entire knowledge on one subject together. One way to achieve this objective is to detect semantically equivalent questions and merge them. This is a challenging task as two questions can have different words and sentence structure yet be similar in meaning. This study proposes two deep learning architectures that capture the semantic similarity between questions-pairs on Quora. We implement siamese convolutional neural network (CNN) and recurrent neural network (RNN) architectures and compare their performance to baseline models from literature. An extensive study is performed on variable length word sequences in CNNs and its performance is analyzed with change in kernel size. The siamese architectures prove to be very effective for analyzing sentence pairs. We also look at the RNN architecture and study the comparison between the two architectures.</p>
