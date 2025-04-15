@@ -28,6 +28,10 @@
     
 }
 
+html {
+    overflow-y: scroll;
+}
+
 body{
     background-color: var(--mainBgColor);            
 }
@@ -35,6 +39,7 @@ body{
 p, span, li{
     color: var(--secondaryTextColor);
     font-size: 1em;
+    text-align: justify;
 }
 
 a{
@@ -193,12 +198,34 @@ li{
     padding-left: 2em;
 }
 
-.card--education-history{
-    border-left: 1px solid var(--mainBorderColor);
-    margin-top: 3em;
-    margin-bottom: 3em;
-    padding-left: 2em;
+.timeline {
+    position: relative;
+    margin-left: 2em;
+    padding-left: 2em; /* Matches padding on card */
+    border-left: 2px solid var(--mainBorderColor); /* Continuous line */
 }
+
+.card--education-history {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 3em;
+    position: relative;
+}
+
+.bullet {
+    width: 1em;
+    height: 1em;
+    background-color: var(--mainBorderColor); /* Matches the line color */
+    border-radius: 50%; /* Makes it a circle */
+    position: absolute;
+    left: -2.5em; /* Position relative to the vertical line */
+    top: 0;
+}
+
+.content {
+    padding-left: 2em; /* Space between bullet and content */
+}
+
 
 .line-break{
     background-color: var(--mainBorderColor);
@@ -258,6 +285,7 @@ li{
     font-size: 16px;
     color: #555;
     margin: 0;
+    text-align: justify;
 }
 
 
@@ -301,4 +329,5 @@ li{
     /* color: #aaa; */
     margin: 0 5px;
 }
+
 
